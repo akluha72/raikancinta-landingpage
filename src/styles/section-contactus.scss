@@ -1,10 +1,32 @@
 .contactus-section {
     padding: 5rem 2rem;
     background-color: #fcb53b;
+    display: flex;
+    justify-content: space-around;
+
+    .aboutme-section {
+        background-color: #b45253;
+        border-radius: 30px;
+        position: relative;
+
+        .aboutme-wrapper {
+            margin: 5rem;
+
+            p {
+                text-align: left;
+            }
+        }
+
+
+        img {
+            width: 250px;
+            position: absolute;
+            bottom: 0;
+        }
+    }
 
     .contactus-content {
         max-width: 600px;
-        margin: 0 auto;
         text-align: center;
 
         h2 {

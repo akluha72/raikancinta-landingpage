@@ -1,16 +1,28 @@
 // $nav-bg: #A31D1D;
-$nav-bg: whitesmoke;
+// $nav-bg: whitesmoke;
+$nav-bg: #fcb53b;
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: $nav-bg; // deep navy
-    color: black;
+    background: $nav-bg;
+    position: fixed;
+    color: white;
+    width: -webkit-fill-available;
+    z-index: 999;
+    transform: translateY(0);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+
+    overflow: hidden;
+    z-index: 3;
 
     .logo {
         font-size: 1.5rem;
         font-weight: bold;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: bolder;
     }
 
     .nav-links {
@@ -19,13 +31,14 @@ $nav-bg: whitesmoke;
         gap: 2rem;
 
         li a {
-            color: black;
+            color: white;
             text-decoration: none;
             font-size: 1rem;
             transition: color 0.3s ease;
+            font-family: "Averia Serif Libre", serif;
 
             &:hover {
-                color: #f1c40f; // gold hover
+                color: #b45253; // gold hover
             }
         }
     }
@@ -72,4 +85,8 @@ $nav-bg: whitesmoke;
     .hamburger {
         display: flex;
     }
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
 }
