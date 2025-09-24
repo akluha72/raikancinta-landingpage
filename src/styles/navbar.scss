@@ -1,10 +1,12 @@
+// $nav-bg: #A31D1D;
+$nav-bg: whitesmoke;
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: #18374e; // deep navy
-    color: #fff;
+    background: $nav-bg; // deep navy
+    color: black;
 
     .logo {
         font-size: 1.5rem;
@@ -17,7 +19,7 @@
         gap: 2rem;
 
         li a {
-            color: #fff;
+            color: black;
             text-decoration: none;
             font-size: 1rem;
             transition: color 0.3s ease;

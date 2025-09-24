@@ -1,11 +1,8 @@
 .hero-section {
-    // background-image: url('./images/iphone-15-mockups.png');
-    background-repeat: no-repeat;
-    background-size: 20%;
-    background-position: right;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     height: 100vh;
 
     .hero-content {
@@ -16,10 +13,8 @@
         padding: 4rem 2rem;
         max-width: 750px;
         height: 400px;
-        margin-left: 11vw;
 
         h1 {
-            // font-family: "Sacramento", cursive;
             font-family: "Averia Serif Libre", serif;
             font-size: 4rem;
             color: white;
@@ -34,6 +29,15 @@
             margin-top: 1rem;
             color: white;
             max-width: 600px;
+        }
+    }
+
+    .hero-image {
+        width: 500px;
+        height: auto;
+        img {
+            max-width: 100%;
+            height: auto;
         }
     }
 }
