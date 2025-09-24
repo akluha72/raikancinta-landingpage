@@ -1,0 +1,53 @@
+.why-choose-us {
+    background-color: white;
+    padding: 2vw 4vw; 
+    // height: 50vh;
+    .grid-layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr; // 3 columns
+        grid-template-rows: 1fr 1fr; // 2 rows
+        gap: 10px;
+        // height: 400px; // demo height
+
+        .box {
+            // background: #f1c40f;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: black;
+            padding: 10px 40px;
+
+            .number {
+                color: #b45253;
+                font-size: 70px;
+                margin: 0;
+                text-align: left;
+                // justify-self: flex-start;
+                align-self: flex-start;
+            }
+            
+            h2 {
+                color: black;
+                font-size: 30px;
+                align-self: flex-start;
+            }
+
+            .description {
+                color: black;
+                font-size: 18px;
+            }
+
+            img {
+                width: 70%;
+            }
+        }
+
+        // Col 2 spans both rows
+        .box3 {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+        }
+    }
+}
