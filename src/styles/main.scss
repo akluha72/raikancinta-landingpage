@@ -1,0 +1,68 @@
+// $primary-color: #3498db;
+@import "./navbar.scss";
+@import "./section-hero.scss";
+@import "./section-product.scss";
+@import "./section-contactus.scss";
+@import "./section-aboutme.scss";
+
+@import "./component-slider.scss";
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2 {
+    // font-family: "Sacramento", cursive;
+    font-family: "Averia Serif Libre", serif;
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+p {
+    font-family: "Averia Serif Libre", serif;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    color: white;
+    max-width: 600px;
+}
+
+body {
+    margin: 0;
+    // display: flex;
+    // place-items: center;
+    // min-width: 320px;
+    // min-height: 100vh;
+}
+
+.cta-button {
+    margin-top: 2rem;
+    margin-left: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    color: white;
+    background-color: #fcb53b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+        background-color: #FFD93D;
+    }
+}
