@@ -1,37 +1,54 @@
 .why-choose-us {
     background-color: white;
-    padding: 2vw 4vw; 
-    // height: 50vh;
+    padding: 2vw 4vw 10vh;
+
+    @media only screen and (min-width: 1200px) {
+        padding: 2vw 4vw;
+    }
+    h1 {
+        color: black;
+        text-align: center;
+        margin: 4rem auto;
+    }
+
     .grid-layout {
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr; // 3 columns
-        grid-template-rows: 1fr 1fr; // 2 rows
+        grid-template-columns: 1fr; // mobile default
+        grid-auto-rows: auto; // flexible height
         gap: 10px;
-        // height: 400px; // demo height
 
         .box {
-            // background: #f1c40f;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             font-weight: bold;
             color: black;
-            padding: 10px 40px;
+            padding: 10px 10px;
+            @media only screen and (min-width: 1200px) {
+                padding: 10px 40px;
+            }
 
             .number {
-                color: #b45253;
-                font-size: 70px;
+                color: black;
+                font-size: 40px;
                 margin: 0;
                 text-align: left;
-                // justify-self: flex-start;
                 align-self: flex-start;
+
+                @media only screen and (min-width: 1200px) {
+                    font-size: 70px;
+                }
             }
-            
+
             h2 {
-                color: black;
-                font-size: 30px;
+                color: #b45253;
+                font-size: 25px;
                 align-self: flex-start;
+
+                @media only screen and (min-width: 1200px) {
+                    font-size: 30px;
+                }
             }
 
             .description {
@@ -40,14 +57,62 @@
             }
 
             img {
-                width: 70%;
+                width: 80%;
+
+                @media only screen and (min-width: 1200px) {
+                    width: 70%;
+                }
             }
         }
 
-        // Col 2 spans both rows
+        // Mobile order
         .box3 {
-            grid-column: 2;
-            grid-row: 1 / span 2;
+            order: -1;
+        } // show first
+        .box1 {
+            order: 1;
+        }
+        .box2 {
+            order: 2;
+        }
+        .box4 {
+            order: 3;
+        }
+        .box5 {
+            order: 4;
+        }
+
+        // Desktop layout ≥1200px
+        @media only screen and (min-width: 1200px) {
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            // Reset orders
+            .box1 {
+                grid-column: 1;
+                grid-row: 1;
+                order: unset;
+            }
+            .box2 {
+                grid-column: 1;
+                grid-row: 2;
+                order: unset;
+            }
+            .box3 {
+                grid-column: 2;
+                grid-row: 1 / span 2;
+                order: unset;
+            }
+            .box4 {
+                grid-column: 3;
+                grid-row: 1;
+                order: unset;
+            }
+            .box5 {
+                grid-column: 3;
+                grid-row: 2;
+                order: unset;
+            }
         }
     }
 }

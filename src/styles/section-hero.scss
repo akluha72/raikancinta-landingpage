@@ -1,22 +1,30 @@
 .hero-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 100vh;
+    padding: 5rem 0;
+    @media only screen and (min-width: 1200px) {
+        height: 100vh;
+        flex-direction: row;
+        padding: 0;
+    }
 
     .hero-content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding: 4rem 2rem;
         max-width: 750px;
         height: 400px;
+        padding: 4rem 2rem 1rem;
 
+        @media only screen and (min-width: 1200px) {
+            padding: 4rem 2rem;
+        }
+        
         h1 {
             font-family: "Averia Serif Libre", serif;
-            font-size: 4rem;
             color: white;
             font-weight: 700;
             margin: 0;
@@ -33,8 +41,13 @@
     }
 
     .hero-image {
-        width: 500px;
+        width: 300px;
         height: auto;
+
+        @media only screen and (min-width: 1200px) {
+            width: 500px;
+        }
+
         img {
             max-width: 100%;
             height: auto;

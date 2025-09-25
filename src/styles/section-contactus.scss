@@ -2,26 +2,46 @@
     padding: 5rem 2rem;
     background-color: #fcb53b;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    gap: 100px;
+
+    @media only screen and (min-width: 1200px) {
+        flex-direction: row;
+    }
 
     .aboutme-section {
         background-color: #b45253;
         border-radius: 30px;
         position: relative;
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (min-width: 1200px) {
+            display: bloc;
+        }
 
         .aboutme-wrapper {
-            margin: 5rem;
+            margin: 2rem;
+
+            @media only screen and (min-width: 1200px) {
+                margin: 5rem;
+            }
 
             p {
                 text-align: left;
+                font-size: 14px;
             }
         }
 
-
         img {
-            width: 250px;
-            position: absolute;
-            bottom: 0;
+            width: 150px;
+
+            @media only screen and (min-width: 1200px) {
+                width: 250px;
+                position: absolute;
+                bottom: 0;
+            }
         }
     }
 
@@ -30,9 +50,13 @@
         text-align: center;
 
         h2 {
-            font-size: 4.5rem;
+            font-size: 3.5rem;
             margin-bottom: 2rem;
             color: white;
+
+            @media only screen and (min-width: 1200px) {
+                font-size: 4.5rem;
+            }
         }
 
         .contactus-form {

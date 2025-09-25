@@ -10,13 +10,18 @@ $nav-bg: #fcb53b;
     background: $nav-bg;
     position: fixed;
     color: white;
-    width: -webkit-fill-available;
+    width: 100vw;
     z-index: 999;
     transform: translateY(0);
-    transition: transform 0.4s ease, box-shadow 0.3s ease;
-
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.3s ease;
     overflow: hidden;
     z-index: 3;
+
+    @media only screen and (min-width: 1200px) {
+        width: -webkit-fill-available;
+    }
 
     .logo {
         font-size: 1.5rem;
