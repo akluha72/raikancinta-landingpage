@@ -40,7 +40,8 @@ body.nav-open {
     position: fixed;
     top: 0;
     right: -100%;
-    height: 100vh;
+    // height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); /* instead of 100vh */
     width: 100%;
     background: $nav-bg;
     list-style: none;
@@ -54,7 +55,6 @@ body.nav-open {
     z-index: 999999;
     margin: 0;
     overflow: hidden;
-
 
     .beinganiceguys {
         padding: 20px;
