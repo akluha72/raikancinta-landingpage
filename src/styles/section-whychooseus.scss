@@ -5,10 +5,16 @@
     @media only screen and (min-width: 1200px) {
         padding: 2vw 4vw;
     }
+
     h1 {
         color: black;
         text-align: center;
         margin: 4rem auto;
+        font-size: 30px;
+
+        @media only screen and (min-width: 1200px) { 
+            font-size: 45px;
+        }
     }
 
     .grid-layout {

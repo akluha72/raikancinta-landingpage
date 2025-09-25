@@ -47,23 +47,24 @@ body.nav-open {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-end;
-    gap: 15rem;
-    padding: 0;
+    justify-content: space-evenly;
+    gap: 3rem;
+    padding: 30px 0px;
     transition: right 0.3s ease-in-out;
     z-index: 999999;
     margin: 0;
     overflow: hidden;
 
-    .beinganiceguys{
+
+    .beinganiceguys {
         padding: 20px;
 
         .red {
-            background-color:#8C1007;
+            background-color: #8c1007;
             padding: 0 15px;
         }
-        
-        @media only screen and (min-width: 1200px) { 
+
+        @media only screen and (min-width: 1200px) {
             display: none;
         }
     }
@@ -73,8 +74,7 @@ body.nav-open {
         padding-bottom: 70px;
         text-align: right;
 
-
-        @media only screen and (min-width: 1200px) { 
+        @media only screen and (min-width: 1200px) {
             padding: 0;
             display: flex;
             flex-direction: row;
@@ -92,7 +92,7 @@ body.nav-open {
     text-align: center;
     margin: 20px 0px;
 
-    @media only screen and (min-width: 1200px) { 
+    @media only screen and (min-width: 1200px) {
         text-decoration: none;
     }
 }
