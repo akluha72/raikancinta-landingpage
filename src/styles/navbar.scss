@@ -10,7 +10,7 @@ body.nav-open {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     background: #fcb53b;
     position: fixed;
     top: 0;
@@ -22,12 +22,17 @@ body.nav-open {
     transition:
         transform 0.4s ease,
         box-shadow 0.3s ease;
+
+    @media only screen and (min-width: 1200px) {
+        padding: 1rem 2rem;
+    }
 }
 
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bolder;
-    font-family: "Nanum Myeongjo", serif;
+    // font-family: "Nanum Myeongjo", serif;
+    font-family: "Averia Serif Libre", serif;
 }
 
 /* Default: hidden off-canvas nav (mobile first) */
@@ -37,7 +42,7 @@ body.nav-open {
     right: -100%;
     height: 100vh;
     width: 100%;
-    background: #18374e;
+    background: $nav-bg;
     list-style: none;
     display: flex;
     flex-direction: column;

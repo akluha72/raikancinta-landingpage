@@ -22,9 +22,9 @@
 
     <ul class="nav-links">
       <button class="close-btn">&times;</button>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">About Me</a></li>
-      <li><a href="#">Sample</a></li>
+      <li><a href="#sample">Sample</a></li>
+      <li><a href="#features">Why choose us?</a></li>
+      <li><a href="#contactMe">Contact Me!</a></li>
     </ul>
 
     <div class="hamburger">
@@ -45,7 +45,7 @@
     </div>
   </section>
 
-  <section class="product-section">
+  <section class="product-section" id="sample">
     <div class="product-wrapper">
       <div class="product-slider">
         <div class="slider-wrapper">
@@ -113,7 +113,7 @@
     </div>
   </section>
 
-  <section class="why-choose-us">
+  <section class="why-choose-us" id="features">
     <h1>Why choose one of our Audio Guestbook Phones?</h1>
     <div class="grid-layout">
       <div class="box box1">
@@ -152,12 +152,12 @@
     </div>
   </section>
 
-
-  <section class="contactus-section">
+  <section class="contactus-section" id="contactMe">
     <div class="aboutme-section">
       <div class="aboutme-wrapper">
-        <h2>I am web dev!</h2>
-        <p>Hi, I’m Lutfi 👋 I create modern and elegant digital wedding invitations that make sharing your special day
+        <h2>Who are <del>we</del>?</h2>
+        <p>Hi, I’m Lutfi 👋 I am solo developer create modern and elegant digital wedding invitations that make sharing
+          your special day
           simple and memorable. Each design is made with love, tailored to your story, and easy to share with family and
           friends.</p>
       </div>
@@ -167,11 +167,23 @@
     <div class="contactus-content">
       <h2>Contact me!</h2>
       <p>Got questions or just want to send us some love? Drop us a message below!</p>
-      <form class="contactus-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="cta-button">Send Message</button>
+      <form action="https://formspree.io/f/xzzjzred" class="fs-form" target="_top" method="POST">
+        <div class="fs-field">
+          <label class="fs-label" for="name">Your Name</label>
+          <input class="fs-input" id="name" name="name" required />
+        </div>
+        <div class="fs-field">
+          <label class="fs-label" for="email">Email</label>
+          <input class="fs-input" id="email" name="email" required />
+        </div>
+        <div class="fs-field">
+          <label class="fs-label" for="message">Message</label>
+          <textarea class="fs-textarea" id="message" name="message" required></textarea>
+          <p class="fs-description">What would you like to discuss?</p>
+        </div>
+        <div class="fs-button-group">
+          <button class="fs-button" type="submit">Submit</button>
+        </div>
       </form>
     </div>
   </section>
@@ -194,8 +206,8 @@
 
       <!-- Right: Contact Info -->
       <div class="footer-right">
-        <p><i class="fa-solid fa-phone"></i> +60 12-345 6789</p>
-        <p><i class="fa-solid fa-envelope"></i> hello@raikancinta.com</p>
+        <p><i class="fa-solid fa-phone"></i> +60 0176200372</p>
+        <p><i class="fa-solid fa-envelope"></i> raikancinta72@gmail.com</p>
       </div>
     </div>
   </footer>
