@@ -1,0 +1,203 @@
+.demo-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+
+    &.is-open {
+        opacity: 1;
+        pointer-events: all;
+
+        .demo-modal__dialog {
+            transform: scale(1);
+        }
+    }
+
+    &__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(3px);
+    }
+
+    &__dialog {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        max-width: 860px;
+        min-height: 460px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 32px 80px -10px rgba(0, 0, 0, 0.45);
+        transform: scale(0.95);
+        transition: transform 0.25s ease;
+    }
+
+    &__close {
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        line-height: 1;
+        color: #5a3e2b;
+        cursor: pointer;
+        z-index: 10;
+        padding: 4px 8px;
+        opacity: 0.6;
+        transition: opacity 0.15s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__left {
+        flex: 0 0 42%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 24px;
+        background-color: #c98420;
+        transition: background-color 0.3s ease;
+    }
+
+    &__img {
+        max-height: 380px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 16px;
+        box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.4);
+    }
+
+    &__right {
+        flex: 1;
+        background: #f7f1e8;
+        padding: 44px 36px 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    &__label {
+        font-family: "Averia Serif Libre", serif;
+        font-style: italic;
+        font-size: 15px;
+        color: #8a7563;
+    }
+
+    &__heading {
+        font-family: "Averia Serif Libre", serif !important;
+        font-size: 26px !important;
+        font-weight: 700;
+        color: #2a1f14 !important;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    &__desc {
+        font-family: "Averia Serif Libre", serif;
+        font-size: 14px !important;
+        color: #5a3e2b !important;
+        line-height: 1.6;
+        margin: 0 !important;
+        max-width: none !important;
+    }
+
+    &__features {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        li {
+            font-family: "Averia Serif Libre", serif;
+            font-size: 13px;
+            color: #4a3526;
+            line-height: 1.4;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 4px;
+    }
+
+    &__btn {
+        display: block;
+        text-align: center;
+        padding: 13px 20px;
+        border-radius: 8px;
+        font-family: "Averia Serif Libre", serif;
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.15s ease, color 0.15s ease;
+        margin: 0;
+
+        &--primary {
+            background: #6b1f1a;
+            color: #fbf7ee !important;
+
+            &:hover {
+                background: #4d1410;
+            }
+        }
+
+        &--secondary {
+            background: transparent;
+            color: #6b1f1a !important;
+            border: 2px solid #6b1f1a;
+
+            &:hover {
+                background: #6b1f1a;
+                color: #fbf7ee !important;
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        padding: 12px;
+        align-items: flex-end;
+
+        &__dialog {
+            flex-direction: column;
+            min-height: auto;
+            border-radius: 20px 20px 0 0;
+            max-height: 92dvh;
+            overflow-y: auto;
+        }
+
+        &__left {
+            flex: none;
+            padding: 24px;
+        }
+
+        &__img {
+            max-height: 180px;
+        }
+
+        &__right {
+            padding: 28px 24px 32px;
+            gap: 10px;
+        }
+
+        &__heading {
+            font-size: 20px !important;
+        }
+    }
+}

@@ -1,0 +1,161 @@
+.faq-section {
+    background-color: #f5ede0;
+    padding: 80px 40px;
+
+    .faq-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        gap: 80px;
+        align-items: flex-start;
+    }
+
+    .faq-left {
+        flex: 0 0 300px;
+        position: sticky;
+        top: 100px;
+
+        .faq-title {
+            font-family: "Averia Serif Libre", serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #2a1f14;
+            line-height: 1.2;
+            margin: 0 0 16px;
+        }
+
+        .faq-subtitle {
+            font-family: "Averia Serif Libre", serif;
+            font-size: 15px;
+            color: #6b5a4a;
+            line-height: 1.6;
+            margin: 0;
+            max-width: none;
+
+            a {
+                color: #2a1f14;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+                transition: color 0.15s ease;
+
+                &:hover {
+                    color: #6b1f1a;
+                }
+            }
+        }
+    }
+
+    .faq-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .faq-item {
+        border: 1.5px solid #ddd5c8;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        transition: border-color 0.2s ease;
+
+        &.is-open {
+            border-color: #6b1f1a;
+        }
+    }
+
+    .faq-question {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 18px 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        font-family: "Averia Serif Libre", serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: #2a1f14;
+        line-height: 1.4;
+        transition: color 0.15s ease;
+
+        &:hover {
+            color: #6b1f1a;
+        }
+    }
+
+    .faq-icon {
+        flex-shrink: 0;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: #6b1f1a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 18px;
+        line-height: 1;
+        transition: background 0.2s ease;
+
+        &::before {
+            content: "+";
+        }
+
+        .faq-item.is-open & {
+            &::before {
+                content: "−";
+            }
+        }
+    }
+
+    .faq-answer {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.35s ease;
+
+        p {
+            font-family: "Averia Serif Libre", serif;
+            font-size: 14px;
+            color: #5a3e2b;
+            line-height: 1.7;
+            padding: 0 20px 20px;
+            margin: 0;
+            max-width: none;
+        }
+    }
+
+    @media (max-width: 860px) {
+        padding: 60px 24px;
+
+        .faq-inner {
+            flex-direction: column;
+            gap: 36px;
+        }
+
+        .faq-left {
+            flex: none;
+            position: static;
+
+            .faq-title {
+                font-size: 28px;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 50px 16px;
+
+        .faq-question {
+            font-size: 14px;
+            padding: 16px;
+        }
+
+        .faq-answer p {
+            padding: 0 16px 16px;
+        }
+    }
+}

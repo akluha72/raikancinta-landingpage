@@ -1,78 +1,233 @@
 .our-product-section {
-    text-align: center;
-    padding: 60px 20px;
+    padding: 80px 40px 100px;
     background-color: #ffffff;
-    height: 80vh;
 
-    h3 {
-        font-size: 45px;
-        margin-bottom: 30px;
-        color: #333;
-        text-align: center;
-        font-family: "Averia Serif Libre", serif;
+    .our-product-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto 48px;
+
+        h3 {
+            font-size: 45px;
+            margin: 0;
+            color: #333;
+            font-family: "Averia Serif Libre", serif;
+            line-height: 1.2;
+            max-width: 480px;
+
+            .hl {
+                background-color: #ffe16a;
+                padding: 0 6px;
+                font-style: italic;
+            }
+        }
+
+        .our-product-subtitle {
+            font-size: 15px;
+            line-height: 1.55;
+            color: #6b5a4a;
+            font-family: "Averia Serif Libre", serif;
+            font-style: italic;
+            margin: 10px 0 0;
+            text-align: right;
+            max-width: 260px;
+            flex-shrink: 0;
+        }
     }
 
-    .carousel-container {
-        position: relative;
-        width: 90%;
-        max-width: 700px;
-        margin: 40px auto;
-        overflow: hidden;
-        border-radius: 20px;
-        // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+        max-width: 740px;
+        margin: 0 auto;
+    }
 
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease;
+    .design-card {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        cursor: pointer;
 
-            a {
-                flex: 0 0 100%;
+        .design-card__media {
+            position: relative;
+            width: 100%;
+            border-radius: 22px;
+            overflow: hidden;
+            background: #f4ede1;
+            box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.35);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
 
-                img {
-                    width: 100%;
-                    height: auto;
-                    display: block;
-                    border-radius: 20px;
-                    cursor: pointer;
-                    max-width: 300px;
-                    margin: 0 auto;
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 22px;
+                transition: transform 0.4s ease;
+            }
+
+            .design-card__badge {
+                position: absolute;
+                top: 14px;
+                right: 14px;
+                background: #c0392b;
+                color: #fff;
+                font-family: "Averia Serif Libre", serif;
+                font-size: 11px;
+                font-weight: 700;
+                padding: 4px 10px;
+                border-radius: 20px;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                z-index: 5;
+            }
+
+            .design-card__overlay {
+                position: absolute;
+                inset: auto 0 0 0;
+                background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+                padding: 80px 20px 22px;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 0.25s ease;
+                pointer-events: none;
+
+                .design-card__cta {
+                    color: #fff;
+                    font-family: "Averia Serif Libre", serif;
+                    font-weight: 700;
+                    font-size: 15px;
+                    letter-spacing: 0.02em;
                 }
             }
         }
 
-        .nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-            z-index: 10;
-            width: 45px; // adjust based on your arrow image size
-            height: 45px;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                transition: transform 0.2s ease, opacity 0.2s ease;
-                opacity: 0.8;
-            }
-
-            &:hover img {
-                transform: scale(1.1);
-                opacity: 1;
-            }
+        &:hover .design-card__media {
+            transform: translateY(-4px);
+            box-shadow: 0 28px 60px -22px rgba(0, 0, 0, 0.45);
         }
 
-        .prev {
-            left: 15px;
+        &:hover .design-card__media img {
+            transform: scale(1.03);
         }
 
-        .next {
-            right: 15px;
+        &:hover .design-card__overlay {
+            opacity: 1;
+        }
+
+        .design-card__meta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+            padding: 0 4px;
+
+            .design-card__name {
+                font-family: "Averia Serif Libre", serif;
+                font-size: 18px;
+                font-weight: 700;
+                color: #333;
+                line-height: 1.2;
+            }
+
+            .design-card__color {
+                font-family: "Averia Serif Libre", serif;
+                font-size: 13px;
+                color: #8a7563;
+                order: -1;
+            }
+
+            .design-card__tag {
+                font-family: "Averia Serif Libre", serif;
+                font-size: 13px;
+                font-style: italic;
+                color: #8a7563;
+                position: relative;
+                padding-left: 14px;
+
+                &::before {
+                    content: "•";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: #c89b4a;
+                }
+            }
         }
     }
 
+    .our-product-foot {
+        margin-top: 48px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #6b1f1a;
+            color: #fbf7ee;
+            border-radius: 8px;
+            font-family: "Averia Serif Libre", serif;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.15s ease, color 0.15s ease;
+
+            &:hover {
+                background: #4d1410;
+            }
+        }
+
+        .cta-outline {
+            background: transparent;
+            color: #6b1f1a;
+            border: 2px solid #6b1f1a;
+
+            &:hover {
+                background: #6b1f1a;
+                color: #fbf7ee;
+            }
+        }
+    }
+
+    @media (max-width: 760px) {
+        padding: 60px 24px 80px;
+
+        .our-product-head {
+            flex-direction: column;
+            gap: 8px;
+
+            .our-product-subtitle {
+                text-align: left;
+                max-width: none;
+            }
+        }
+
+        .cards-grid {
+            gap: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 60px 16px 80px;
+
+        .our-product-head h3 {
+            font-size: 28px;
+        }
+
+        .cards-grid {
+            grid-template-columns: 1fr;
+            max-width: 360px;
+        }
+
+        .design-card .design-card__meta .design-card__name {
+            font-size: 16px;
+        }
+    }
 }

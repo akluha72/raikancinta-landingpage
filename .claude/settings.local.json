@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"c:\\\\laragon\\\\www\\\\project_raikancinta_landingpage\\\\images\\\\demo\")",
+      "Bash(dir \"c:\\\\laragon\\\\www\\\\project_raikancinta_landingpage\\\\src\\\\styles\")"
+    ]
+  }
+}
