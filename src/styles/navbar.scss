@@ -75,7 +75,7 @@ body.nav-open {
         text-align: right;
 
         @media only screen and (min-width: 1200px) {
-            padding: 0;
+            padding: 10px 0px;
             display: flex;
             flex-direction: row;
             gap: 40px;
@@ -98,6 +98,27 @@ body.nav-open {
 }
 
 .navbar .nav-links li a:hover {
+    color: #b45253;
+}
+
+.navbar .nav-links li.lang-switch a {
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+    @media only screen and (min-width: 1200px) {
+        padding: 6px 16px;
+        font-size: 0.95rem;
+    }
+}
+
+.navbar .nav-links li.lang-switch a:hover {
+    background-color: white;
     color: #b45253;
 }
 

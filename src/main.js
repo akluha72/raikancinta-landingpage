@@ -63,3 +63,33 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeModal();
 });
 
+// WhatsApp contact form
+const waForm = document.getElementById('waContactForm');
+if (waForm) {
+    const WHATSAPP_NUMBER = '60176200372';
+    const designSelect = waForm.querySelector('#design');
+
+    waForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const name = waForm.querySelector('#name').value.trim();
+        const design = designSelect.value;
+        const extraMessage = waForm.querySelector('#message').value.trim();
+
+        const designText = design === 'custom' ? 'custom design' : design;
+
+        const greeting = name ? `Hi, saya ${name}.` : 'Hi,';
+        let message = `${greeting} Saya nak kad kahwin ${designText}.`;
+        if (extraMessage) message += `\n\n${extraMessage}`;
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+        if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_form_submit', {
+                design_selected: design
+            });
+        }
+
+        window.open(url, '_blank');
+    });
+}
+
